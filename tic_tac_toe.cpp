@@ -7,20 +7,13 @@ using namespace std;
 char board[9] = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
 
 void drawBoard() { //отрисовка игрового поля
-    cout << "
-";
-    cout << " " << board[0] << " | " << board[1] << " | " << board[2] << "
-";
-    cout << "---|---|---
-";
-    cout << " " << board[3] << " | " << board[4] << " | " << board[5] << "
-";
-    cout << "---|---|---
-";
-    cout << " " << board[6] << " | " << board[7] << " | " << board[8] << "
-";
-    cout << "
-";
+    cout << "\n";
+    cout << " " << board[0] << " | " << board[1] << " | " << board[2] << "\n";
+    cout << "---|---|---\n";
+    cout << " " << board[3] << " | " << board[4] << " | " << board[5] << "\n";
+    cout << "---|---|---\n";
+    cout << " " << board[6] << " | " << board[7] << " | " << board[8] << "\n";
+    cout << "\n";
 }
 
 bool isMovesLeft() { //проверка правмльности хода
@@ -77,7 +70,8 @@ int minimax(bool isMax) { //функция минимакса
             }
         }
         return best;
-    } else {
+    }
+    else {
         int best = 1000;
         for (int i = 0; i < 9; i++) {
             if (board[i] == ' ') {
@@ -112,25 +106,23 @@ int findBestMove() { //нахождение лучшего хода
 bool isGameOver() { //окончание игры
     int score = evaluate();
     if (score == 10) {
-        cout << "Computer wins!
-";
-        return true;
-    } else if (score == -10) {
-        cout << "You win!
-";
-        return true;
-    } else if (!isMovesLeft()) {
-        cout << "It's a draw!
-";
-        return true;
+        cout << "Computer wins!";
+            return true;
+    }
+    else if (score == -10) {
+        cout << "You win!";
+            return true;
+    }
+    else if (!isMovesLeft()) {
+        cout << "It's a draw!";
+            return true;
     }
     return false;
 }
 
 int main() {
-    cout << "Tic Tac Toe Game vs AI
-";
-    drawBoard();
+    cout << "Tic Tac Toe Game vs AI";
+        drawBoard();
 
     while (true) {
         int move;
@@ -139,9 +131,8 @@ int main() {
 
         while (cin.fail() || move < 0 || move > 8 || board[move] != ' ') {
             cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '
-');
-            cout << "Invalid input. Try again: ";
+            cin.ignore(numeric_limits<streamsize>::max(), ' ');
+                cout << "Invalid input. Try again: ";
             cin >> move;
         }
 
@@ -152,9 +143,8 @@ int main() {
 
         int aiMove = findBestMove();
         board[aiMove] = 'O';
-        cout << "Computer played: " << aiMove << "
-";
-        drawBoard();
+        cout << "Computer played: " << aiMove << "";
+            drawBoard();
 
         if (isGameOver()) break;
     }
