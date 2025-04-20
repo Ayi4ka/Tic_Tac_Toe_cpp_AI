@@ -61,3 +61,7 @@ g++ tic_tac_toe.cpp -o tic_tac_toe
 - GUI version (SFML/Qt)
 - Difficulty levels
 - Enhanced UI
+
+## Пример использования 
+![image](https://github.com/user-attachments/assets/9fdd06b8-92bf-4af5-9885-3674cda22abb)
+
