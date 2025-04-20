@@ -28,39 +28,7 @@
 
 ---
 
-## 💡 Gameplay Preview / Как играть
-
-X - YOU O - Smart Machine | |
---+---+-- | |
---+---+-- | |
-Enter cell number from 0 to 8:
-
-
-- Игрок ходит первым (`X`)  
-- Компьютер отвечает (`O`)  
-- Побеждает тот, кто соберёт линию из трёх одинаковых символов  
-
----
-
-## 🛠 Usage / Как запустить
-
-### 🔧 Requirements / Требования
-
-- Компилятор C++ (например, GCC, MSVC)  
-- Терминал или IDE (Code::Blocks, Visual Studio, CLion и т.д.)  
-
-### ▶️ Compilation Example / Пример компиляции
-
-```bash
-g++ tic_tac_toe.cpp -o tic_tac_toe
-./tic_tac_toe
-```
-
-##✅ Status / Статус
-✨ Completed and fully playable. Further improvements may include:
-- GUI version (SFML/Qt)
-- Difficulty levels
-- Enhanced UI
+🤝 Author | Автор Made with ❤️ by Ayi4ka in 2022 / Сделано с любовью — Айка в 2022 году
 
 ## Пример использования 
 ![image](https://github.com/user-attachments/assets/9fdd06b8-92bf-4af5-9885-3674cda22abb)
